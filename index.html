@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Automatización con IA para Negocios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0b0f1a;
+  --card: #111827;
+  --primary: #22d3ee;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617, var(--bg));
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+nav h2 { color: var(--primary); }
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+nav a:hover { color: var(--primary); }
+
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
+  font-weight: 700;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 40px rgba(34,211,238,0.4);
+  transition: transform 0.3s ease;
+}
+
+.btn:hover { transform: scale(1.05); }
+
+/* SECTIONS */
+section {
+  padding: 90px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(180deg, #020617, var(--card));
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #1f2937;
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* PROCESS */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.step {
+  text-align: center;
+  padding: 30px;
+  border-radius: 18px;
+  background: #020617;
+  border: 1px solid #1e293b;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  border-top: 1px solid #1e293b;
+}
+
+/* FORM */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto 0;
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>IA Automation</h2>
+  <div>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Automatiza tu negocio con Inteligencia Artificial</h1>
+  <p>Automatizaciones con IA que trabajan por ti 24/7.</p>
+  <a href="#contacto" class="btn">Quiero automatizar</a>
+</section>
+
+<section id="contacto" class="cta">
+  <h2>Empieza hoy mismo</h2>
+  <p>Convierte tu negocio en un sistema automático con IA.</p>
+
+  <div class="form-container">
+    <form name="contacto" method="POST" data-netlify="true" action="/gracias.html">
+      <input type="hidden" name="form-name" value="contacto">
+
+      <input type="text" name="name" placeholder="Tu nombre" required class="input">
+      <input type="email" name="email" placeholder="Tu correo" required class="input">
+      <textarea name="message" placeholder="¿Qué quieres automatizar?" required class="input" style="height:130px;"></textarea>
+
+      <button type="submit" class="btn" style="width:100%">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2025 Automatización con IA · Todos los derechos reservados
+</footer>
+
+<a class="whatsapp" href="https://wa.me/528135257311">💬 WhatsApp</a>
+
+</body>
+</html>
